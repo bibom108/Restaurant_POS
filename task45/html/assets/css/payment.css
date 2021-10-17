@@ -1,0 +1,199 @@
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: sans-serif;
+	background: #f6f9fa;
+}
+
+h1 {
+	color: #ccc;
+	text-align: center;
+}
+h4.payment-title {
+    text-align: left;
+    padding: 10px 0px 30px 30px;
+    font-weight: 500;
+    color: #5e6977;
+}
+a {
+  color: #ccc;
+  text-decoration: none;
+  outline: none;
+}
+
+.tab_container {
+    width: 727px;
+    margin: 50px auto;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 7px;
+  background:#fff;
+}
+
+input, section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+
+label {
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 20px 65px;
+  color: #ccc;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 2px;
+      border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  border-bottom:2px solid #eee;
+
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3{
+  display: block;
+  padding: 20px 0 0 0;
+  color: #999;
+}
+
+.tab_container .tab-content h3  {
+  text-align: center;
+}
+
+.tab_container [id^="tab"]:checked + label {
+  background: #fff;
+  border-bottom:2px solid #358ed7;
+  color: #358ed7;
+}
+
+.tab_container [id^="tab"]:checked + label>span.numberCircle {
+  border: 2px solid #358ed7;
+  border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 10px;
+    margin: 3px 8px
+}
+
+label:hover {
+background-color:#eee;
+  border-radius:0px;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 3px 5px;
+    border: 2px solid #ccc;
+    text-align: center;
+    font-size: 10px;
+    margin: 3px 8px
+}
+
+
+
+
+.card-image {
+	display: block;
+	background: #fff center center no-repeat;
+	background-size: cover;
+}
+
+.card-image > img {
+	display: block;
+	width: 100%;
+}
+
+
+.card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.card {
+	border-radius: 50px;
+	display: inline-block;
+	width: 30%;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+
+.input {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  height: 38px;
+  padding-left: 15px;
+  font-weight: 600;
+  font-size: 11pt;
+  color: #5e6977;
+ 
+}
+input[type="text"] {
+   display: initial;
+  padding:15px
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+input[id^="radio"]{
+   display:none;
+}
+
+input[id^="radio"] + label
+{
+    background-image:url("https://www.dropbox.com/s/mnwbybfl4pnzoi4/radio-inactive.png?raw=1");
+    height: 26px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+input[id^="radio"]:checked + label
+{
+    background-image:url("https://www.dropbox.com/s/8634yi8i1s7fx7w/radio-active.png?raw=1");
+  height: 26px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    cursor:pointer;
+}
+p.credit {
+  text-align:center;
+  color: #ccc;
+}
