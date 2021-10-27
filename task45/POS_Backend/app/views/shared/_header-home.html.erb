@@ -1,0 +1,45 @@
+<header class="page-header">
+  <div class="page-header__top">
+    <div class="uk-container">
+      <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar="">
+        <div class="uk-navbar-left"><button class="uk-button" type="button" data-target="#offcanvas" data-uk-toggle data-uk-icon="menu"></button>
+          <ul class="uk-navbar-nav">
+            <li><a href="<%= root_path %>">Home</a></li>
+            <li><a href="#">Order Online</a></li>
+          </ul>
+        </div>
+        <div class="uk-navbar-center">
+          <div class="logo">
+            <div class="logo__box"><a class="logo__link" href="<%= root_path %>"><%= image_tag("logo.png", :alt => "logo", class: "logo__img logo__img--full") %></a></div>
+          </div>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li><a href="<%= pages_path %>">Our Menu</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="page-header__bottom">
+    <div class="uk-container">
+      <div class="uk-navbar-container uk-navbar-transparent" data-uk-navbar="">
+        <div class="uk-navbar-left">
+          <div>
+            <div class="block-with-phone"><%= image_tag("icons/delivery.png", :alt => "delivery")%>
+              <div> <span>For Delivery, Call us</span><a href="tel:13205448749">1-320-544-8749</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="uk-navbar-center"></div>
+        <div class="uk-navbar-right">
+          <div class="other-links">
+            <a class="uk-button" href=<%=new_page_path %> > <span>Thanh toán</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

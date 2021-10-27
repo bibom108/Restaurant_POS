@@ -1,0 +1,60 @@
+<div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: <%= image_path('svg/abstract-bg-4.svg') %>;">
+  <!-- SVG Bottom Shape -->
+  <figure class="position-absolute right-0 bottom-0 left-0">
+    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1921 273">
+      <polygon fill="#fff" points="0,273 1921,273 1921,0 "></polygon>
+    </svg>
+  </figure>
+  <!-- End SVG Bottom Shape -->
+</div>
+
+<div class="container py-5 py-sm-7">
+  <a class="d-flex justify-content-center mb-5" href="<%= root_path %>">
+    <%#= image_tag "logo.png", class: "z-index-2", style: "width: 5rem;" %>
+  </a>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7 col-lg-5">
+      <div class="card card-lg mb-5">
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="text-center">
+              <div class="mb-4">
+                <h1 class="h2">Đăng ký</h1>
+                <p>Bạn đã có tài khoản? <a href="<%= new_user_session_path %>">Đăng nhập ngay</a></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <%= f.label "Email", class: "label-text" %><span style="color: red;">*</span><br/>
+              <%= f.email_field :email, class: "form-control", placeholder: "Nhập địa chỉ thư điện tử của bạn", required: true %>
+            </div>
+
+            <div class="form-row">
+              <div class="col">
+                <%= f.label "Mật khẩu" %><span style="color: red;">*</span>
+                <% if @minimum_password_length %>
+                  <em>(ít nhất <%= @minimum_password_length %> ký tự)</em>
+                <% end %><br/>
+                <%= f.password_field :password, autocomplete: "off", class: "form-control", required: true %>
+              </div>
+              <div class="col">
+                <%= f.label "Xác nhận mật khẩu" %><span style="color: red;">*</span>
+                <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="actions text-center">
+              <%= f.submit "Đăng ký", class: "btn btn-info" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

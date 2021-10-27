@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>PosHungbx</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="footer-offset has-navbar-vertical-aside navbar-vertical-aside-show-xl">
+  <%= render 'shared/header' %>
+  <%= render 'shared/aside' %>
+  <%= render 'shared/message' %>
+
+  <main id="content" role="main" class="main">
+    <div class="content container-fluid">
+      <%= yield %>
+    </div>
+  </main>
+
+  <%= yield :javascripts %>
+  <%= javascript_include_tag asset_path("/js/ckeditor.js", skip_pipeline: true) %>
+  </body>
+</html>

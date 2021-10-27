@@ -1,0 +1,166 @@
+<body class="page-product dm-dark">
+
+<!-- Loader-->
+<!-- Loader end-->
+
+<div class="page-wrapper">
+  <%= render 'shared/header-home'%>
+  <main class="page-main">
+
+    <div class="page-content">
+      <div class="uk-margin-large-top uk-container">
+        <div class="product-full-card food_<%= @food.id %>">
+          <div class="uk-grid uk-grid-large uk-child-width-1-2@m uk-flex-middle" data-uk-grid>
+            <div>
+              <div class="product-full-card__gallery">
+                <div data-uk-slideshow="ratio: 1:1; animation: slide">
+                  <div class="product-full-card__gallery-box">
+                    <ul class="uk-slideshow-items uk-child-width-1-1">
+                      <li class="uk-flex uk-flex-center uk-flex-middle"><%= image_tag @food.avatar.url if @food.avatar.present? %></li>
+                    </ul>
+                    <div class="product-full-card__whish"><i class="fas fa-heart"></i></div>
+                    <div class="product-full-card__type spicy"></div>
+                    <div class="product-full-card__tooltip" data-uk-tooltip="title: pizza; pos: bottom-right"><i class="fas fa-info-circle"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="product-full-card__content">
+                <div class="product-full-card__not-active">
+                  <div class="product-full-card__title"><%= @food.name %></div>
+                  <div class="product-full-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores et facere odio, omnis possimus quam quas recusandae repudiandae sequi?</div>
+                </div>
+              </div>
+              <div class="product-full-card__info">
+                <div class="product-full-card__price" > <span>Price: </span><span class="value" id="price-value">$<%= @food.price %></span></div>
+                <div class="product-full-card__btns"><span class="counter"><span class="minus">-</span><input type="text" value="1" id="counter-value" /><span class="plus">+</span></span><a class="uk-button" href="#!" onclick="AddToCart()">Add to Cart<span data-uk-icon="cart"></span></a></div>
+              </div>
+              <div class="product-full-card__category"><span>Category:  </span><a href="#!"><%= @food.category.name %></a></div>
+              <div class="product-full-card__share"><span>Share This:</span>
+                <ul>
+                  <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
+                  <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="product-full-card__tabs">
+            <ul class="uk-subnav" data-uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+              <li><a href="#">Description</a></li>
+              <li><a href="#">Additional information</a></li>
+              <li><a href="#">Reviews (2)</a></li>
+            </ul>
+            <ul class="uk-switcher uk-margin">
+              <li>
+                <p>Cupidatat non proident, suntin culp quiofc deserunt mollit anim id est Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                <p>Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                <ul class="product-full-card__info-list">
+                  <li><strong>Energy</strong><span>450 calories</span></li>
+                  <li><strong>Total Fats</strong><span>10 g (saturated 26%)</span></li>
+                  <li><strong>Carbohydrates</strong><span>21 g (Total Sugars 4g)</span></li>
+                  <li><strong>Protein</strong><span> 38 g</span></li>
+                </ul>
+                <p>Cupidatat non proident, suntin culp quiofc deserunt mollit anim id est Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                <p>Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+              </li>
+              <li>
+                <p>Cupidatat non proident, suntin culp quiofc deserunt mollit anim id est Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                <p>Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                <ul class="product-full-card__info-list">
+                  <li><strong>Energy</strong><span>450 calories</span></li>
+                  <li><strong>Total Fats</strong><span>10 g (saturated 26%)</span></li>
+                  <li><strong>Carbohydrates</strong><span>21 g (Total Sugars 4g)</span></li>
+                  <li><strong>Protein</strong><span> 38 g</span></li>
+                </ul>
+                <p>Cupidatat non proident, suntin culp quiofc deserunt mollit anim id est Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                <p>Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+              </li>
+              <li>
+                <div class="section-title">
+                  <div class="uk-h2">Reviews</div>
+                </div>
+                <ul class="uk-comment-list">
+                  <li>
+                    <article class="uk-comment">
+                      <header class="uk-comment-header">
+                        <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                          <div class="uk-width-auto@s"><%= image_tag("blog/img-reviews-1.png", :alt => "logo", class: "uk-comment-avatar") %></div>
+                          <div class="uk-width-expand@s">
+                            <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                              <h4 class="uk-comment-title uk-margin-remove">Michael Shaw</h4><span class="uk-text-meta uk-margin-small-left">August 20, 2020</span>
+                            </div>
+                            <div class="uk-comment-body">
+                              <p>Incididunt ut labore et dolore magna aliqua enim ad minim veniam quisya nos ullamco laboris nisi ut aliquip ex ea com labmodo.</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </header>
+                    </article>
+                    <ul>
+                      <li>
+                        <article class="uk-comment">
+                          <header class="uk-comment-header">
+                            <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                              <div class="uk-width-auto@s"><%= image_tag("blog/img-reviews-2.png", :alt => "logo", class: "uk-comment-avatar") %></div>
+                              <div class="uk-width-expand@s">
+                                <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                                  <h4 class="uk-comment-title uk-margin-remove">Tom Butler</h4><span class="uk-text-meta uk-margin-small-left">August 20, 2020</span>
+                                </div>
+                                <div class="uk-comment-body">
+                                  <p>Incididunt ut labore et dolore magna aliqua enim minim veniam ullamco laboris nisi ut aliquip ex ea com.</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
+                                </div>
+                              </div>
+                            </div>
+                          </header>
+                        </article>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <article class="uk-comment">
+                      <header class="uk-comment-header">
+                        <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                          <div class="uk-width-auto@s"><%= image_tag("blog/img-reviews-3.png", :alt => "logo", class: "uk-comment-avatar") %></div>
+                          <div class="uk-width-expand@s">
+                            <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                              <h4 class="uk-comment-title uk-margin-remove">Jasmine Hold</h4><span class="uk-text-meta uk-margin-small-left">August 20, 2020</span>
+                            </div>
+                            <div class="uk-comment-body">
+                              <p>Incididunt ut labore et dolore magna aliqua enim ad minim veniam quisya nos ullamco laboris nisi ut aliquip ex ea com labmodo.</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
+                            </div>
+                          </div>
+                        </div>
+                      </header>
+                    </article>
+                  </li>
+                </ul>
+                <div class="block-form uk-margin-medium-top">
+                  <div class="section-title">
+                    <div class="uk-h2">Leave a Reply</div>
+                  </div>
+                  <div class="section-content">
+                    <p>Your email address will not be published. Required fields are marked *</p>
+                    <form action="#!">
+                      <div class="uk-grid uk-grid-small uk-child-width-1-2@s" data-uk-grid>
+                        <div><input class="uk-input uk-form-large" type="text" placeholder="Your Name *"></div>
+                        <div><input class="uk-input uk-form-large" type="text" placeholder="Email *"></div>
+                        <div class="uk-width-1-1"><textarea class="uk-textarea uk-form-large" placeholder="Reviews *"></textarea></div>
+                        <div><button class="uk-button uk-button-large" type="submit">Post Review</button></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%= render 'shared/footer-home'%>
+</div>
+
+</body>

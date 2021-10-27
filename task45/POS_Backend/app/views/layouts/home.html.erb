@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>PosHungbx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta charset="utf-8">
+  <meta content="Chernyh Mihail" name="author">
+  <meta content="Spedito - All in one place" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="format-detection" content="telephone=no">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+  <%= javascript_pack_tag 'darkmode' %>
+  <%= javascript_pack_tag 'fontawesome' %>
+  <%= javascript_pack_tag 'jquery' %>
+  <%= javascript_pack_tag 'libs' %>
+  <%= javascript_pack_tag 'main' %>
+  <%= javascript_pack_tag 'uikit' %>
+  <%= javascript_pack_tag 'uikit-icons' %>
+  <%= javascript_pack_tag 'cart-process' %>
+
+  <%= stylesheet_link_tag 'home' %>
+
+</head>
+    <%= yield %>
+</html>

@@ -1,0 +1,65 @@
+<aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered navbar-dark navbar-vertical-aside-initialized">
+  <div class="navbar-vertical-container">
+    <div class="navbar-vertical-footer-offset pb-0">
+      <div class="navbar-brand-wrapper justify-content-between">
+        <!-- Logo -->
+
+        <a class="navbar-brand" href="<%= root_path %>" aria-label="Front">
+          <%#= image_tag "logo.png", class: "navbar-brand-logo", alt: "Logo", style: "height: 40px; width: 40px; min-width: unset" %>
+          <%#= image_tag "logo.png", class: "navbar-brand-logo-mini", alt: "Logo", style: "height: 40px; width: 40px; min-width: unset" %>
+        </a>
+
+        <!-- End Logo -->
+
+        <!-- Navbar Vertical Toggle -->
+        <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+          <i class="tio-clear tio-lg"></i>
+        </button>
+        <!-- End Navbar Vertical Toggle -->
+      </div>
+
+      <!-- Content -->
+      <div class="navbar-vertical-content">
+        <ul class="navbar-nav navbar-nav-lg nav-tabs">
+
+          <li class="nav-item">
+            <small class="nav-subtitle" title="Pages">Admin</small>
+            <small class="tio-more-horizontal nav-subtitle-replacer"></small>
+          </li>
+
+          <li class="nav-item ">
+            <a class="js-nav-tooltip-link nav-link " href="<%= restaurants_path %>" title="" data-placement="left" data-original-title="Layouts">
+              <%= fa_icon('coffee', class: "nav-icon") %>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Restaurants</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="js-nav-tooltip-link nav-link " href="<%= categories_path %>" title="" data-placement="left" data-original-title="Layouts">
+              <%= fa_icon('clipboard-list', class: "nav-icon") %>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="js-nav-tooltip-link nav-link " href="<%= foods_path %>" title="" data-placement="left" data-original-title="Layouts">
+              <%= fa_icon('hamburger', class: "nav-icon") %>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Foods</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="js-nav-tooltip-link nav-link " href="<%= customers_path %>" title="" data-placement="left" data-original-title="Layouts">
+              <%= fa_icon('user-friends', class: "nav-icon") %>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Customers</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="js-nav-tooltip-link nav-link " href="<%= orders_path %>" title="" data-placement="left" data-original-title="Layouts">
+              <%= fa_icon('file-alt', class: "nav-icon") %>
+              <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Orders</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Content -->
+    </div>
+  </div>
+</aside>
