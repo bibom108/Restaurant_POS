@@ -113,10 +113,20 @@
         </div>
       </div>
       <div class="page-content">
-        <div class="uk-margin-large-top uk-container uk-container-small"><img class="page-cart__img" src="assets/img/pages/cart/img-cart.png" alt="">
-          <div class="page-cart__box">
-            <div class="page-cart__title">Your cart is currently empty.</div><a class="uk-button" href="page-catalog.html">Return to Shop</a>
+        <div class="uk-margin-large-top uk-container uk-container-small">
+          <div class="page-cart__list">
+            <div class="product__header">
+              <h5 class="product__title">NAME</h5>
+              <h5 class="product__price">PRICE</h5>
+              <h5 class="product__quantity">QUANTITY</h5>
+              <h5 class="product__total">TOTAL</h5>
+            </div>
           </div>
+          <img class="page-cart__img" src="assets/img/pages/cart/img-cart.png" alt="">
+          <div class="page-cart__box">
+            <div class="page-cart__title">Your cart is currently empty.</div><a id="page-cart__control-btn" class="uk-button" href="page-catalog.html">RETURN TO SHOP</a>
+          </div>
+          
         </div>
       </div>
     </main>
@@ -200,6 +210,7 @@
   <script src="assets/js/uikit-icons.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/fontawesome.all.min.js"></script>
+  <script src="assets/js/cart-process.js"></script>
 </body>
 
 </html>
