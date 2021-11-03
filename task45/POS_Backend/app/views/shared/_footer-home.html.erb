@@ -1,0 +1,75 @@
+<footer class="page-footer">
+  <div class="page-footer__top">
+    <div class="uk-container">
+      <div class="page-footer__logo">
+        <div class="logo"> <a class="logo__link" href="<%= root_path %>"><%= image_tag("logo.png", :alt => "logo", class: "logo__img") %></a></div>
+      </div>
+      <div class="page-footer__contacts">
+        <div class="contact-item-box">
+          <div class="contact-item-box__title">Địa chỉ </div>
+          <div class="contact-item-box__value">Lầu 70, landmark 81, Bình Thạnh<br> Thành phố Hồ Chí Minh</div>
+        </div>
+        <div class="contact-item-box">
+          <div class="contact-item-box__title">Giờ mở cửa</div>
+          <div class="contact-item-box__value">Mon – Sat: 10:00 AM – 11:30 PM<br> Sun: 9:00 AM – 4:00 PM</div>
+        </div>
+        <div class="contact-item-box">
+          <div class="contact-item-box__title">Liên hệ</div>
+          <div class="contact-item-box__value">Email: <a href="#">bxhunga3@gmail.com</a><br> Phone: <a href="tel:3205448749">320-544-8749</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer__bottom">
+    <div class="uk-container">
+      <div class="page-footer__social">
+        <ul class="social">
+          <li class="social-item"><a class="social-link" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="social-item"><a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="social-item"><a class="social-link" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li class="social-item"><a class="social-link" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+          <li class="social-item"><a class="social-link" href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </div>
+      <div class="page-footer__copy"><span>© Copyrights 2020 Spedito. All rights reserved.</span><a href="#">Terms and Conditions</a></div>
+    </div>
+  </div>
+  <div id="offcanvas" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar"><button class="uk-offcanvas-close" type="button" data-uk-close=""></button>
+      <div class="uk-margin-top">
+        <ul class="uk-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Order Online</a></li>
+          <li><a href="#">Our Menu</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <hr class="uk-margin">
+      <ul class="uk-nav uk-nav-parent-icon" data-uk-nav>
+        <li><a href="#">Bún</a></li>
+        <li><a href="#">Cơm - xôi </a></li>
+        <li><a href="#">Cháo - phở - hủ tiếu</a></li>
+        <li><a href="#">Bánh</a></li>
+        <li><a href="#">Đồ uống</a></li>
+      </ul>
+      <hr class="uk-margin">
+      <div class="uk-margin-bottom">
+        <div class="block-with-phone"><%= image_tag("icons/delivery.png", :alt => "delivery")%>
+          <div> <span>For Delivery, Call us</span><a href="tel:13205448749">1-320-544-8749</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="uk-flex-top" id="callback" data-uk-modal="">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      <button class="uk-modal-close-default" type="button" data-uk-close=""></button>
+      <p></p>
+    </div>
+  </div>
+  <div class="uk-modal-full uk-modal" id="modal-full" data-uk-modal>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport><button class="uk-modal-close-full" type="button" data-uk-close></button>
+      <form class="uk-search uk-search-large"><input class="uk-search-input uk-text-center" type="search" placeholder="Search..." aria-label="None" autofocus></form>
+    </div>
+  </div>
+</footer>

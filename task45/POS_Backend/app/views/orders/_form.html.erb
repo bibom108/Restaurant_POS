@@ -1,0 +1,52 @@
+
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="card">
+    <div class="card-body">
+
+      <div class="row form-group">
+        <%= form.label :total_price, class: "col-sm-2 col-form-label input-label" %>
+        <div class="col-sm-10">
+          <%= form.text_field :total_price, class: "form-control", placeholder: "Please input total price", required: true %>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <%= form.label :quantity, class: "col-sm-2 col-form-label input-label" %>
+        <div class="col-sm-10">
+          <%= form.text_field :quantity, class: "form-control", placeholder: "Please input quantity (number)", required: true %>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <%= form.label :customer_id, class: "col-sm-2 col-form-label input-label" %>
+        <div class="col-sm-10">
+          <%= form.select :customer_id, options_for_select(Customer.all.collect{|a| [a.name, a.id]}, order.customer.present? ? order.customer.id : ""), {include_blank: "-- Please select customer --"}, {class: "form-control", required: true} %>
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <%= form.label :food_ids, class: "col-sm-2 col-form-label input-label" %>
+        <div class="col-sm-10">
+          <%= form.select :food_ids, options_for_select(Food.all.collect{|a| [a.name, a.id]}, order.foods.present? ? order.foods.collect(&:id) : ""), {include_blank: "-- Please select foods --"}, {class: "form-control", required: true, multiple: true} %>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <%= form.submit "Save changes", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+

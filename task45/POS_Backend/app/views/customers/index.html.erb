@@ -1,0 +1,46 @@
+
+<div class="page-header">
+  <div class="row align-items-center mb-3">
+    <div class="col-sm mb-2 mb-sm-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-no-gutter">
+          <li class="breadcrumb-item"><a class="breadcrumb-link" href="<%= root_path %>"><%= fa_icon("home") %></a></li>
+          <li class="breadcrumb-item active" aria-current="page">Customers</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-header-title">Customers<span class="badge badge-soft-dark ml-2"><%= Customer.all.size %></span></h1>
+    </div>
+    <div class="col-sm-auto">
+      <%= link_to "Add Customer", new_customer_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="table table-borderless card-table">
+      <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.id %></td>
+          <td><%= customer.name %></td>
+          <td><%= link_to 'Show', customer %></td>
+          <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+          <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

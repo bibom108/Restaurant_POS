@@ -1,0 +1,43 @@
+<div class="page-header">
+  <div class="row align-items-center mb-3">
+    <div class="col-sm mb-2 mb-sm-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-no-gutter">
+          <li class="breadcrumb-item"><a class="breadcrumb-link" href="<%= root_path %>"><%= fa_icon("home") %></a></li>
+          <li class="breadcrumb-item active" aria-current="page">Restaurants</li>
+        </ol>
+      </nav>
+
+      <h1 class="page-header-title">Restaurants <span class="badge badge-soft-dark ml-2"><%= Restaurant.all.size %></span></h1>
+    </div>
+    <div class="col-sm-auto">
+      <%= link_to "Add Restaurant", new_restaurant_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="table table-borderless card-table">
+      <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @restaurants.each do |restaurant| %>
+        <tr>
+          <td><%= restaurant.id %></td>
+          <td><%= restaurant.name %></td>
+          <td><%= link_to 'Show', restaurant %></td>
+          <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+          <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
