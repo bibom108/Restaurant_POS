@@ -3,13 +3,12 @@ let foodTag = new Map([
 ]);
 
 let selectedItem = {
+    img_src: "",
     name: "",
-    tag: "",                            // to get the image of each product
+    tag: "",                            // 
     price: 0,
     quantity: 0
 }
-
-document.getElementsByClassName('uk-button')[3].addEventListener('click', AddToCart);
 
 function AddToCart(){
     let productNumber = localStorage.getItem('productNumber');
@@ -19,6 +18,16 @@ function AddToCart(){
     selectedItem.price = parseFloat((document.getElementById('price-value').innerHTML).substring(1));
     selectedItem.quantity = parseInt(document.getElementById('counter-value').value);
     selectedItem.tag = foodTag.get(selectedItem.name);
+
+    img = document.getElementById("product-picture");                                                   // img to data url
+    var imgCanvas = document.createElement("canvas"),
+        imgContext = imgCanvas.getContext("2d");
+    imgCanvas.width = img.width;
+    imgCanvas.height = img.height;
+    imgContext.drawImage(img, 0, 0, img.width, img.height);
+    var imgAsDataURL = imgCanvas.toDataURL("");
+
+    selectedItem.img_src = imgAsDataURL;                                                                // store image to selectedItem
 
     console.log(selectedItem);
 
@@ -100,7 +109,7 @@ function DisplayCart(){
         if (myProduct == undefined){
             container.innerHTML += ''
                 + '<div class="product product__' + item.tag + '">'
-                    + '<h5 class="product__title">' + '<img class="product__img" src="assets/img/products/' + item.tag + '.png">' + item.name + '</h5>'
+                    + '<h5 class="product__title">' + '<img class="product__img" src="' + item.img_src + '">' + item.name + '</h5>'
                     + '<h5 class="product__price">' + item.price + '</h5>'
                     + '<h5 class="product__quantity">' + '<span class="counter" style = "font-style: normal;"><span class="minus" onclick="MinusBtn(\'' + item.tag + '\')">-</span><input type="text" value="' + item.quantity + '" /><span onclick="PlusBtn(\'' + item.tag + '\')" class="plus">+</span></span>' + '</h5>'
                     + '<h5 class="product__total">'+ item.price * item.quantity + '<a onclick="CloseBtn(\'' + item.tag + '\')" class = "product__close"> <img src="https://img.icons8.com/ios-glyphs/30/ffffff/macos-close.png"/> </a>' + '</h5>'
