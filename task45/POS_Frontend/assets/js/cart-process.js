@@ -125,7 +125,7 @@ function ChangeUI(){
     
     if (productNumber > 0){
         var btn = document.getElementById('page-cart__control-btn');
-        btn.href = 'page-payment.html';
+        btn.href = "page-payment.html";
         btn.innerHTML = 'PAYMENT';
         document.getElementsByClassName('page-cart__img')[0].style.display = 'none';
         var total = document.getElementsByClassName('page-cart__title')[0];
@@ -144,6 +144,9 @@ function ChangeUI(){
         total.style.textAlign = 'center';
         total.style.marginRight = '0px';
         document.getElementsByClassName('page-cart__list')[0].style.display = 'none';
+        var slotName = document.getElementsByClassName('slotname');
+        slotName[0].style.display = 'none';
+        slotName[1].style.display = 'none';
     }
 }
 
