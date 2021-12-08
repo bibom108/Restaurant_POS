@@ -1,4 +1,5 @@
 # Restaurant_POS
-Bài tập lớn môn Công nghệ phần mềm về restaurant POS.    
-## Link báo cáo
+Project of SE about restaurant POS.    
+## Task45 folder is the project's code
+## Report
 https://www.overleaf.com/read/wwtvypvgsyzm
